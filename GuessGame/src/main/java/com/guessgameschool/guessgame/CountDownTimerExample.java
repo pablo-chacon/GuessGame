@@ -31,7 +31,7 @@ public class CountDownTimerExample {
             else {
                 tk.beep();
                 System.out.println("The Time's over. . .!");
-//AWT thread stops
+//Await thread stops
                 System.exit(0);
             }
         }
