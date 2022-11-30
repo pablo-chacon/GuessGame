@@ -16,14 +16,14 @@ public class CountDownTimerExample {
     }
     class rt extends TimerTask {
         //declare a variable beep
-        int beep = 3;
+        int beep = 30;
         //task to be performed
         public void run() {
 //if BEEP VARIABLE IS GREATER THAN ZERO
             if (beep > 0) {
 //perform beep operation and print after each second
                 tk.beep();
-                System.out.println("One second over . . . Beep!");
+                System.out.println(beep);
 //decrement the value beep
                 beep--;
             }
