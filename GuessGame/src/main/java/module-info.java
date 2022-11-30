@@ -7,6 +7,7 @@ module com.guessgameschool.guessgame {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires com.almasb.fxgl.all;
+    requires java.desktop;
     opens com.guessgameschool.guessgame to javafx.fxml;
     exports com.guessgameschool.guessgame;
 }
