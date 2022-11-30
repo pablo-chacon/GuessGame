@@ -1,16 +1,16 @@
 // Player POJO.
-package player;
+package User;
 
 
 
-public class Player {
+public class User {
 
     private String name;
     private String score;
     private String level;
 
 
-    public Player(String name, String score, String level) {
+    public User(String name, String score, String level) {
         this.name = name;
         this.score = score;
         this.level = level;
