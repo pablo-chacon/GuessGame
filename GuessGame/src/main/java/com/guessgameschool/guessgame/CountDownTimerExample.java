@@ -1,5 +1,7 @@
 package com.guessgameschool.guessgame;
 
+import com.almasb.fxgl.app.GameController;
+
 import java.awt.Toolkit;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -15,8 +17,10 @@ public class CountDownTimerExample {
         t.schedule(new rt(), 0, 1*1000);
     }
     class rt extends TimerTask {
+        InGameController GameController = new InGameController();
+
         //declare a variable beep
-        int beep = 30;
+        public int beep = 30;
         //task to be performed
         public void run() {
 //if BEEP VARIABLE IS GREATER THAN ZERO
@@ -26,6 +30,7 @@ public class CountDownTimerExample {
                 System.out.println(beep);
 //decrement the value beep
                 beep--;
+                //GameController.countDown(beep);
             }
 //if beep variable is less than zero
             else {
@@ -36,9 +41,11 @@ public class CountDownTimerExample {
             }
         }
     }
-    public static void main(String args[]) {
+    /*public static void main(String args[]) {
         System.out.println("Task is going to start. . .");
         new CountDownTimerExample();
         System.out.println("Task that is set up is scheduled. . .");
     }
+
+     */
 }

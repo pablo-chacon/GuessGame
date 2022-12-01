@@ -9,7 +9,7 @@ public class InGameController {
     @FXML
     private Label questionBox;
     @FXML
-    private Label countDownTimer;
+    public Label countDownTimer;
     @FXML
     private RadioButton lvl1;
     @FXML
@@ -84,4 +84,10 @@ public class InGameController {
         questionBox.setText("Exit game");
 
     }
+    @FXML
+    public void countDown(int beep) {
+        countDownTimer.setText(String.valueOf(beep));
+
+    }
+
 }

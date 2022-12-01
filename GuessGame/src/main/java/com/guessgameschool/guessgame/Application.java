@@ -15,6 +15,8 @@ public class Application extends javafx.application.Application {
         stage.setTitle("The Guess Game");
         stage.setScene(scene);
         stage.show();
+
+        new CountDownTimerExample();
     }
 
     public static void main(String[] args) {
