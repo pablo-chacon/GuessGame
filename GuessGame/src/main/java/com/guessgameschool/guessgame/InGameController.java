@@ -17,7 +17,6 @@ public class InGameController {
     private IntegerProperty timeSeconds = new SimpleIntegerProperty(STARTTIME);
 
 
-
     public InGameController(){
         instance = this;
     }
