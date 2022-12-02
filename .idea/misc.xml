@@ -8,4 +8,7 @@
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_18" default="true" project-jdk-name="18" project-jdk-type="JavaSDK" />
+  <component name="TaskProjectConfiguration">
+    <server type="Generic" url="http://172.17.0.1" />
+  </component>
 </project>
