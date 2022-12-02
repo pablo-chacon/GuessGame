@@ -66,7 +66,7 @@
         <Button maxWidth="1.7976931348623157E308" style="-fx-font-size: 15;" text="Exit" alignment="TOP_LEFT" onAction="#exitGame" />
         <Label fx:id="countDownTimer" text="30" style="-fx-font-size: 50; -fx-padding: 30;"/>
         <Button maxWidth="1.7976931348623157E308" style="-fx-font-size: 25;" text="STANNA" alignment="TOP_RIGHT" onAction="#stopPlay" />
-        <Button maxWidth="1.7976931348623157E308" style="-fx-font-size: 25;" text="STARTA" alignment="TOP_RIGHT" onAction="#nextPlay" />
+        <Button maxWidth="1.7976931348623157E308" style="-fx-font-size: 25;" text="STARTA" alignment="TOP_RIGHT" onAction="#nextPlay"/>
     </HBox>
 
 </VBox>

@@ -1,21 +1,21 @@
 package com.guessgameschool.guessgame;
 
-import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
-import javafx.scene.control.ToggleGroup;
 import javafx.util.Duration;
-
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 
 public class InGameController {
     public static  InGameController instance;
+    private static final Integer STARTTIME = 30;
+    private Timeline timeline;
+    private IntegerProperty timeSeconds = new SimpleIntegerProperty(STARTTIME);
+
 
     public InGameController(){
         instance = this;
@@ -100,20 +100,17 @@ public class InGameController {
     }
     @FXML
     public void nextPlay() {
-        Timeline timeline = new Timeline(
-                new KeyFrame(Duration.seconds(0),
-                        new EventHandler<ActionEvent>() {
-                            @Override public void handle(ActionEvent actionEvent) {
-                                Calendar time = Calendar.getInstance();
-                                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("ss");
-                                countDownTimer.setText("0");
-                                countDownTimer.setText(simpleDateFormat.format(time.getTime()));
-                            }
-                        }
-                ),
-                new KeyFrame(Duration.seconds(1))
-        );
-        timeline.setCycleCount(Animation.INDEFINITE);
-        timeline.play();
+
+        countDownTimer.textProperty().bind(timeSeconds.asString());
+        if (timeline != null) {
+            timeline.stop();
+        }
+        timeSeconds.set(STARTTIME);
+        timeline = new Timeline();
+        timeline.getKeyFrames().add(
+                new KeyFrame(Duration.seconds(STARTTIME+1),
+                        new KeyValue(timeSeconds, 0)));
+        timeline.playFromStart();
+
     }
 }
