@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 
 
 <VBox spacing="10.0" xmlns:fx="http://javafx.com/fxml"
@@ -34,7 +35,7 @@
                 <RadioButton fx:id="lvl4" text="4 - 8 000 SEK" toggleGroup="$winPriceList" GridPane.rowIndex="17" disable="true"/>
                 <RadioButton fx:id="lvl3" text="3 - 5 000 SEK" toggleGroup="$winPriceList" GridPane.rowIndex="18" disable="true"/>
                 <RadioButton fx:id="lvl2" text="2 - 3 000 SEK" toggleGroup="$winPriceList" GridPane.rowIndex="19" disable="true"/>
-                <RadioButton fx:id="lvl1" text="1 - 1 000 SEK" toggleGroup="$winPriceList" GridPane.rowIndex="20" selected="true" disable="true"/>
+                <RadioButton fx:id="lvl1" text="1 - 1 000 SEK" toggleGroup="$winPriceList" GridPane.rowIndex="20" selected="true" disable="false"/>
             </children>
 
 </GridPane>
@@ -43,21 +44,29 @@
         </HBox>
     </HBox>
     <HBox id="TopButtons" alignment="TOP_CENTER" style="-fx-padding: -300; -fx-border-insets: 10; -fx-background-insets: 10;">
-        <Button fx:id="optionOne" maxWidth="1.7976931348623157E308" style="-fx-font-size: 25;" text="This is a answear you can pick" alignment="TOP_LEFT" onAction="#optionOne" />
+        <Button fx:id="optionOne" maxWidth="1.7976931348623157E308" style="-fx-font-size: 25;" text="This is a answear you can pick" alignment="TOP_LEFT" onAction="#optionOne">
+
+            <!--<graphic >
+                <ImageView >
+                    <Image url="@images/buttons.png"/>
+                </ImageView>
+            </graphic>-->
+        </Button>
     </HBox>
     <HBox  id="TopButtons" alignment="TOP_CENTER" style="-fx-padding: -250; -fx-border-insets: 10; -fx-background-insets: 10;">
-        <Button fx:id="optionTwo" maxWidth="1.7976931348623157E308" style="-fx-font-size: 25;" text="This is a answear you can pick" alignment="TOP_LEFT" onAction="#optionOne" />
+        <Button fx:id="optionTwo" maxWidth="1.7976931348623157E308" style="-fx-font-size: 25;" text="This is a answear you can pick" alignment="TOP_LEFT" onAction="#optionTwo" />
     </HBox>
     <HBox  id="TopButtons" alignment="TOP_CENTER" style="-fx-padding: -200; -fx-border-insets: 10; -fx-background-insets: 10;">
-        <Button fx:id="optionThree" maxWidth="1.7976931348623157E308" style="-fx-font-size: 25;" text="This is a answear you can pick" alignment="TOP_LEFT" onAction="#optionOne" />
+        <Button fx:id="optionThree" maxWidth="1.7976931348623157E308" style="-fx-font-size: 25;" text="This is a answear you can pick" alignment="TOP_LEFT" onAction="#optionThree" />
     </HBox>
     <HBox id="TopButtons" alignment="TOP_CENTER" style="-fx-padding: -150; -fx-border-insets: 10; -fx-background-insets: 10;">
-        <Button fx:id="optionFour" maxWidth="1.7976931348623157E308" style="-fx-font-size: 25;" text="This is a answear you can pick" alignment="TOP_LEFT" onAction="#optionOne" />
+        <Button fx:id="optionFour" maxWidth="1.7976931348623157E308" style="-fx-font-size: 25;" text="This is a answear you can pick" alignment="TOP_LEFT" onAction="#optionFour" />
     </HBox>
     <HBox id="TopButtons" alignment="CENTER" style="-fx-padding: -120; -fx-border-insets: 1; -fx-background-insets: 1;">
-        <Button maxWidth="1.7976931348623157E308" style="-fx-font-size: 15;" text="Exit" alignment="TOP_LEFT" onAction="#optionOne" />
+        <Button maxWidth="1.7976931348623157E308" style="-fx-font-size: 15;" text="Exit" alignment="TOP_LEFT" onAction="#exitGame" />
         <Label fx:id="countDownTimer" text="30" style="-fx-font-size: 50; -fx-padding: 30;"/>
-        <Button maxWidth="1.7976931348623157E308" style="-fx-font-size: 25;" text="STANNA" alignment="TOP_RIGHT" onAction="#optionOne" />
+        <Button maxWidth="1.7976931348623157E308" style="-fx-font-size: 25;" text="STANNA" alignment="TOP_RIGHT" onAction="#stopPlay" />
+        <Button maxWidth="1.7976931348623157E308" style="-fx-font-size: 25;" text="STARTA" alignment="TOP_RIGHT" onAction="#nextPlay" />
     </HBox>
 
 </VBox>
