@@ -1,11 +1,25 @@
 package com.guessgameschool.guessgame;
 
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
+import javafx.util.Duration;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 public class InGameController {
+    public static  InGameController instance;
+
+    public InGameController(){
+        instance = this;
+    }
     @FXML
     private Label questionBox;
     @FXML
@@ -85,9 +99,21 @@ public class InGameController {
 
     }
     @FXML
-    public void countDown(int beep) {
-        countDownTimer.setText(String.valueOf(beep));
-
+    public void nextPlay() {
+        Timeline timeline = new Timeline(
+                new KeyFrame(Duration.seconds(0),
+                        new EventHandler<ActionEvent>() {
+                            @Override public void handle(ActionEvent actionEvent) {
+                                Calendar time = Calendar.getInstance();
+                                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("ss");
+                                countDownTimer.setText("0");
+                                countDownTimer.setText(simpleDateFormat.format(time.getTime()));
+                            }
+                        }
+                ),
+                new KeyFrame(Duration.seconds(1))
+        );
+        timeline.setCycleCount(Animation.INDEFINITE);
+        timeline.play();
     }
-
 }

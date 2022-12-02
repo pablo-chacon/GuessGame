@@ -3,7 +3,7 @@ package com.guessgameschool.guessgame;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
+import javafx.scene.control.TextArea;
 import java.io.IOException;
 
 public class Application extends javafx.application.Application {
@@ -16,10 +16,14 @@ public class Application extends javafx.application.Application {
         stage.setScene(scene);
         stage.show();
 
-        new CountDownTimerExample();
+
+
     }
 
-    public static void main(String[] args) throws ClassNotFoundException {
+    public static void main(String[] args) {
+
         launch();
+
+
     }
 }
