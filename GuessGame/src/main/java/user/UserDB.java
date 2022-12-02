@@ -1,16 +1,13 @@
-package User;
+package user;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
+import java.util.*;
 
 public abstract class UserDB implements DataAccessObject<User> {
 
-    private List<User> users = new ArrayList<>();
+    public List<User> users = new ArrayList<>();
 
     public UserDB() {
-        users.add(new User("Bot", "0", "0"));
+        users.add(new User(1L, "pablo-chacon", "0", "0"));
 
     }
 
@@ -26,7 +23,7 @@ public abstract class UserDB implements DataAccessObject<User> {
 
 
     @Override
-    public void newPlayer(User user) {
+    public void newUser(User user) {
         users.add(user);
     }
 

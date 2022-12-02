@@ -1,19 +1,30 @@
 // Player POJO.
-package User;
+package user;
 
 
 
 public class User {
 
+
+    private long id;
     private String name;
     private String score;
     private String level;
 
 
-    public User(String name, String score, String level) {
+    public User(Long id, String name, String score, String level) {
+        this.id = id;
         this.name = name;
         this.score = score;
         this.level = level;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getName() {

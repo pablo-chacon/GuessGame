@@ -1,4 +1,4 @@
-package User;
+package user;
 
 import java.util.List;
 import java.util.Optional;
@@ -9,11 +9,8 @@ public interface DataAccessObject<U> {
     Optional<User> get(long id);
     List<U> getAll();
     List<U> findByName();
-    boolean insertPlayer(User user);
-    boolean updatePlayer(User user);
-    boolean deleteEmployee(User user);
 
-    void newPlayer(User user);
+    void newUser(User user);
 
     void update(User user, String[] params);
 
