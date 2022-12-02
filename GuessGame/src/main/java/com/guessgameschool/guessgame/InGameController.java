@@ -101,7 +101,6 @@ public class InGameController {
     @FXML
     public void nextPlay() {
 
-
         countDownTimer.textProperty().bind(timeSeconds.asString());
         if (timeline != null) {
             timeline.stop();
@@ -112,5 +111,6 @@ public class InGameController {
                 new KeyFrame(Duration.seconds(STARTTIME+1),
                         new KeyValue(timeSeconds, 0)));
         timeline.playFromStart();
+
     }
 }
