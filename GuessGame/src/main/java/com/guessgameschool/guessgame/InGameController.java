@@ -1,5 +1,6 @@
 package com.guessgameschool.guessgame;
 
+import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
@@ -9,10 +10,13 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.util.Duration;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class InGameController {
+
     public static  InGameController instance;
-    private static final Integer STARTTIME = 30;
+    private static Integer STARTTIME = 30;
     private Timeline timeline;
     private IntegerProperty timeSeconds = new SimpleIntegerProperty(STARTTIME);
 
@@ -96,10 +100,15 @@ public class InGameController {
     @FXML
     protected void exitGame() {
         questionBox.setText("Exit game");
+        //System.exit(0);
+
 
     }
     @FXML
     public void nextPlay() {
+        Timer t = new Timer();
+        t.schedule(new GameOver() {},  31000);
+
 
         countDownTimer.textProperty().bind(timeSeconds.asString());
         if (timeline != null) {
@@ -112,5 +121,21 @@ public class InGameController {
                         new KeyValue(timeSeconds, 0)));
         timeline.playFromStart();
 
+    }
+    class GameOver extends TimerTask {
+        public void run() {
+            // System.exit är en möjlig lösnign till att avsluta spelet
+            // (inte den besta men det är en lösnign)
+            //System.exit(0);
+            //metod för att få GAME OVER att dyka upp och att avsluta spelet
+            //Kan outputa ett vårde som tas upp i en annan funktion t.ex. en if ()
+            //if (output från GameOver = rättSvar) inget händer
+            //if (output från GameOver = felSvar) print("GAME OVER") och System.exit(0);
+            System.out.println(countDownTimer.getText());
+            if (countDownTimer.getText().equals("0")) {
+                System.out.println("GAME OVER");
+                System.exit(0);
+            }
+        }
     }
 }
