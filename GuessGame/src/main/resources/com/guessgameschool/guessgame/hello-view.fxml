@@ -5,12 +5,12 @@
 
 
 <VBox spacing="10.0"  xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.guessgameschool.guessgame.InGameController" style="-fx-background-color: #000000">
+      fx:controller="com.guessgameschool.guessgame.InGameController" style="-fx-background-color: rgb(0,0,0)">
 
     <HBox style="-fx-background-size:100%100%; -fx-background-image: url(https://gameobjectstudio.com/images/bodydBack.gif)">
-        <Label fx:id="questionBox" alignment="BASELINE_CENTER" text="PRESS GO TO START THE GAME" prefHeight="200" prefWidth="600" style="-fx-background-image: url(https://gameobjectstudio.com/images/qback.gif);-fx-background-size: 100%100%; -fx-text-fill: Yellow; -fx-font-size: 15; -fx-background-color:#000000; -fx-wrap-text:true;" HBox.hgrow="ALWAYS"/>
+        <Label fx:id="questionBox" alignment="BASELINE_CENTER" text="PRESS GO TO START THE GAME" prefHeight="200" prefWidth="600" style="-fx-background-image: url(https://gameobjectstudio.com/images/qback.gif);-fx-background-size: 100%100%; -fx-text-fill: Yellow; -fx-font-size: 15; -fx-background-color:rgb(0,0,0); -fx-wrap-text:true;" HBox.hgrow="ALWAYS"/>
 
-        <HBox prefHeight="400" prefWidth="20" style="-fx-font-size: 15; -fx-text-fill: Yellow; -fx-background-color:#000000;" HBox.hgrow="ALWAYS">
+        <HBox prefHeight="400" prefWidth="20" style="-fx-font-size: 15; -fx-text-fill: Yellow; -fx-background-color:rgba(0,0,0,0.73);" HBox.hgrow="ALWAYS">
             <GridPane hgap="10" vgap="5">
             <fx:define>
                 <ToggleGroup fx:id="winPriceList"/>
