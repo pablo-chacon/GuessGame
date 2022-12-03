@@ -4,38 +4,38 @@
 <?import javafx.scene.image.*?>
 
 
-<VBox spacing="10.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.guessgameschool.guessgame.InGameController" style="-fx-background-color: #12202d">
+<VBox spacing="10.0"  xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.guessgameschool.guessgame.InGameController" style="-fx-background-color: #000000">
 
-    <HBox>
-        <Label fx:id="questionBox" text="" prefHeight="200" prefWidth="600" style="-fx-font-size: 15; -fx-background-color:GRAY; -fx-wrap-text:true; -fx-text-alignment:center;" HBox.hgrow="ALWAYS"/>
+    <HBox style="-fx-background-size:100%100%; -fx-background-image: url(https://gameobjectstudio.com/images/bodydBack.gif)">
+        <Label fx:id="questionBox" alignment="BASELINE_CENTER" text="PRESS GO TO START THE GAME" prefHeight="200" prefWidth="600" style="-fx-background-image: url(https://gameobjectstudio.com/images/qback.gif);-fx-background-size: 100%100%; -fx-text-fill: Yellow; -fx-font-size: 15; -fx-background-color:#000000; -fx-wrap-text:true;" HBox.hgrow="ALWAYS"/>
 
-        <HBox prefHeight="400" prefWidth="20" style="-fx-font-size: 15; -fx-background-color:WHITE; -fx-alignment:center; " HBox.hgrow="ALWAYS">
+        <HBox prefHeight="400" prefWidth="20" style="-fx-font-size: 15; -fx-text-fill: Yellow; -fx-background-color:#000000;" HBox.hgrow="ALWAYS">
             <GridPane hgap="10" vgap="5">
             <fx:define>
                 <ToggleGroup fx:id="winPriceList"/>
             </fx:define>
             <children>
-                <RadioButton fx:id="lvl20" text="20 - 200 000 SEK" toggleGroup="$winPriceList" GridPane.rowIndex="1" disable="true"/>
-                <RadioButton fx:id="lvl19" text="19 - 175 000 SEK" toggleGroup="$winPriceList" GridPane.rowIndex="2" disable="true"/>
-                <RadioButton fx:id="lvl18" text="18 - 150 000 SEK" toggleGroup="$winPriceList" GridPane.rowIndex="3" disable="true"/>
-                <RadioButton fx:id="lvl17" text="17 - 125 000 SEK" toggleGroup="$winPriceList" GridPane.rowIndex="4" disable="true"/>
-                <RadioButton fx:id="lvl16" text="16 - 100 000 SEK" toggleGroup="$winPriceList" GridPane.rowIndex="5" disable="true"/>
-                <RadioButton fx:id="lvl15" text="15 - 90 000 SEK" toggleGroup="$winPriceList" GridPane.rowIndex="6" disable="true"/>
-                <RadioButton fx:id="lvl14" text="14 - 80 000 SEK" toggleGroup="$winPriceList" GridPane.rowIndex="7" disable="true"/>
-                <RadioButton fx:id="lvl13" text="13 - 70 000 SEK" toggleGroup="$winPriceList" GridPane.rowIndex="8" disable="true"/>
-                <RadioButton fx:id="lvl12" text="12 - 60 000 SEK" toggleGroup="$winPriceList" GridPane.rowIndex="9" disable="true"/>
-                <RadioButton fx:id="lvl11" text="11 - 50 000 SEK" toggleGroup="$winPriceList" GridPane.rowIndex="10" disable="true"/>
-                <RadioButton fx:id="lvl10" text="10 - 40 000 SEK" toggleGroup="$winPriceList" GridPane.rowIndex="11" disable="true"/>
-                <RadioButton fx:id="lvl9" text="9 - 35 000 SEK" toggleGroup="$winPriceList" GridPane.rowIndex="12" disable="true"/>
-                <RadioButton fx:id="lvl8" text="8 - 25 000 SEK" toggleGroup="$winPriceList" GridPane.rowIndex="13" disable="true"/>
-                <RadioButton fx:id="lvl7" text="7 - 17 000 SEK" toggleGroup="$winPriceList" GridPane.rowIndex="14" disable="true"/>
-                <RadioButton fx:id="lvl6" text="6 - 13 000 SEK" toggleGroup="$winPriceList" GridPane.rowIndex="15" disable="true"/>
-                <RadioButton fx:id="lvl5" text="5 - 10 000 SEK" toggleGroup="$winPriceList" GridPane.rowIndex="16" disable="true"/>
-                <RadioButton fx:id="lvl4" text="4 - 8 000 SEK" toggleGroup="$winPriceList" GridPane.rowIndex="17" disable="true"/>
-                <RadioButton fx:id="lvl3" text="3 - 5 000 SEK" toggleGroup="$winPriceList" GridPane.rowIndex="18" disable="true"/>
-                <RadioButton fx:id="lvl2" text="2 - 3 000 SEK" toggleGroup="$winPriceList" GridPane.rowIndex="19" disable="true"/>
-                <RadioButton fx:id="lvl1" text="1 - 1 000 SEK" toggleGroup="$winPriceList" GridPane.rowIndex="20" selected="true" disable="false"/>
+                <RadioButton fx:id="lvl20" style="-fx-text-fill: Yellow;" text="20 - $200 000" toggleGroup="$winPriceList" GridPane.rowIndex="1" disable="true"/>
+                <RadioButton fx:id="lvl19" style="-fx-text-fill: Yellow;" text="19 - $175 000" toggleGroup="$winPriceList" GridPane.rowIndex="2" disable="true"/>
+                <RadioButton fx:id="lvl18" style="-fx-text-fill: Yellow;" text="18 - $150 000" toggleGroup="$winPriceList" GridPane.rowIndex="3" disable="true"/>
+                <RadioButton fx:id="lvl17" style="-fx-text-fill: Yellow;" text="17 - $125 000" toggleGroup="$winPriceList" GridPane.rowIndex="4" disable="true"/>
+                <RadioButton fx:id="lvl16" style="-fx-text-fill: Yellow;" text="16 - $100 000" toggleGroup="$winPriceList" GridPane.rowIndex="5" disable="true"/>
+                <RadioButton fx:id="lvl15" style="-fx-text-fill: Yellow;" text="15 - $90 000" toggleGroup="$winPriceList" GridPane.rowIndex="6" disable="true"/>
+                <RadioButton fx:id="lvl14" style="-fx-text-fill: Yellow;" text="14 - $80 000" toggleGroup="$winPriceList" GridPane.rowIndex="7" disable="true"/>
+                <RadioButton fx:id="lvl13" style="-fx-text-fill: Yellow;" text="13 - $70 000" toggleGroup="$winPriceList" GridPane.rowIndex="8" disable="true"/>
+                <RadioButton fx:id="lvl12" style="-fx-text-fill: Yellow;" text="12 - $60 000" toggleGroup="$winPriceList" GridPane.rowIndex="9" disable="true"/>
+                <RadioButton fx:id="lvl11" style="-fx-text-fill: Yellow;" text="11 - $50 000"  toggleGroup="$winPriceList" GridPane.rowIndex="10" disable="true"/>
+                <RadioButton fx:id="lvl10" style="-fx-text-fill: Yellow;" text="10 - $40 000" toggleGroup="$winPriceList" GridPane.rowIndex="11" disable="true"/>
+                <RadioButton fx:id="lvl9" style="-fx-text-fill: Yellow;" text="9 - $35 000" toggleGroup="$winPriceList" GridPane.rowIndex="12" disable="true"/>
+                <RadioButton fx:id="lvl8" style="-fx-text-fill: Yellow;" text="8 - $25 000" toggleGroup="$winPriceList" GridPane.rowIndex="13" disable="true"/>
+                <RadioButton fx:id="lvl7" style="-fx-text-fill: Yellow;" text="7 - $17 000" toggleGroup="$winPriceList" GridPane.rowIndex="14" disable="true"/>
+                <RadioButton fx:id="lvl6" style="-fx-text-fill: Yellow;" text="6 - $13 000" toggleGroup="$winPriceList" GridPane.rowIndex="15" disable="true"/>
+                <RadioButton fx:id="lvl5" style="-fx-text-fill: Yellow;" text="5 - $10 000" toggleGroup="$winPriceList" GridPane.rowIndex="16" disable="true"/>
+                <RadioButton fx:id="lvl4" style="-fx-text-fill: Yellow;" text="4 - $8 000" toggleGroup="$winPriceList" GridPane.rowIndex="17" disable="true"/>
+                <RadioButton fx:id="lvl3" style="-fx-text-fill: Yellow;" text="3 - $5 000" toggleGroup="$winPriceList" GridPane.rowIndex="18" disable="true"/>
+                <RadioButton fx:id="lvl2" style="-fx-text-fill: Yellow;" text="2 - $3 000" toggleGroup="$winPriceList" GridPane.rowIndex="19" disable="true"/>
+                <RadioButton fx:id="lvl1" style="-fx-text-fill: Yellow;" text="1 - $1 000" toggleGroup="$winPriceList" GridPane.rowIndex="20" selected="true" disable="false"/>
             </children>
 
 </GridPane>
@@ -43,30 +43,24 @@
 
         </HBox>
     </HBox>
-    <HBox id="TopButtons" alignment="TOP_CENTER" style="-fx-padding: -300; -fx-border-insets: 10; -fx-background-insets: 10;">
-        <Button fx:id="optionOne" maxWidth="1.7976931348623157E308" style="-fx-font-size: 25;" text="This is a answear you can pick" alignment="TOP_LEFT" onAction="#optionOne">
-
-            <!--<graphic >
-                <ImageView >
-                    <Image url="@images/buttons.png"/>
-                </ImageView>
-            </graphic>-->
+    <HBox id="TopButtons" alignment="TOP_CENTER" style=" -fx-padding: -300; -fx-border-insets: 10; -fx-background-insets: 10;">
+        <Button fx:id="optionOne" style="-fx-font-size: 15; -fx-text-fill: #ffffff; -fx-background-color:#12202d; -fx-background-size:100%100%; -fx-background-image: url(https://gameobjectstudio.com/images/buttons9.png)" text="Here is the answer box where you can put you text in, it supports 2 lines of text in it." alignment="TOP_LEFT" minWidth="380" maxWidth="380" maxHeight="55" minHeight="55" wrapText="true" onAction="#optionOne">
         </Button>
     </HBox>
     <HBox  id="TopButtons" alignment="TOP_CENTER" style="-fx-padding: -250; -fx-border-insets: 10; -fx-background-insets: 10;">
-        <Button fx:id="optionTwo" maxWidth="1.7976931348623157E308" style="-fx-font-size: 25;" text="This is a answear you can pick" alignment="TOP_LEFT" onAction="#optionTwo" />
+        <Button fx:id="optionTwo" style="-fx-font-size: 15; -fx-text-fill: #ffffff; -fx-background-color:#12202d; -fx-background-size:100%100%; -fx-background-image: url(https://gameobjectstudio.com/images/buttons9.png)" text="Here is the answer box where you can put you text in, it supports 2 lines of text in it." alignment="TOP_LEFT" minWidth="380" maxWidth="380" maxHeight="55" minHeight="55" wrapText="true" onAction="#optionTwo" />
     </HBox>
     <HBox  id="TopButtons" alignment="TOP_CENTER" style="-fx-padding: -200; -fx-border-insets: 10; -fx-background-insets: 10;">
-        <Button fx:id="optionThree" maxWidth="1.7976931348623157E308" style="-fx-font-size: 25;" text="This is a answear you can pick" alignment="TOP_LEFT" onAction="#optionThree" />
+        <Button fx:id="optionThree" style="-fx-font-size: 15; -fx-text-fill: #ffffff; -fx-background-color:#12202d; -fx-background-size:100%100%; -fx-background-image: url(https://gameobjectstudio.com/images/buttons9.png)" text="Here is the answer box where you can put you text in, it supports 2 lines of text in it." alignment="TOP_LEFT" minWidth="380" maxWidth="380" maxHeight="55" minHeight="55" wrapText="true" onAction="#optionThree" />
     </HBox>
     <HBox id="TopButtons" alignment="TOP_CENTER" style="-fx-padding: -150; -fx-border-insets: 10; -fx-background-insets: 10;">
-        <Button fx:id="optionFour" maxWidth="1.7976931348623157E308" style="-fx-font-size: 25;" text="This is a answear you can pick" alignment="TOP_LEFT" onAction="#optionFour" />
+        <Button fx:id="optionFour" style="-fx-font-size: 15; -fx-text-fill: #ffffff; -fx-background-color:#12202d; -fx-background-size:100%100%; -fx-background-image: url(https://gameobjectstudio.com/images/buttons9.png)" text="Here is the answer box where you can put you text in, it supports 2 lines of text in it." alignment="TOP_LEFT" minWidth="380" maxWidth="380" maxHeight="55" minHeight="55" wrapText="true" onAction="#optionFour" />
     </HBox>
     <HBox id="TopButtons" alignment="CENTER" style="-fx-padding: -120; -fx-border-insets: 1; -fx-background-insets: 1;">
-        <Button maxWidth="1.7976931348623157E308" style="-fx-font-size: 15;" text="Exit" alignment="TOP_LEFT" onAction="#exitGame" />
-        <Label fx:id="countDownTimer" text="30" style="-fx-font-size: 50; -fx-padding: 30;"/>
-        <Button maxWidth="1.7976931348623157E308" style="-fx-font-size: 25;" text="STANNA" alignment="TOP_RIGHT" onAction="#stopPlay" />
-        <Button maxWidth="1.7976931348623157E308" style="-fx-font-size: 25;" text="STARTA" alignment="TOP_RIGHT" onAction="#nextPlay"/>
+        <Button maxWidth="1.7976931348623157E308" prefWidth="100" style="-fx-background-color:black; -fx-font-size: 25; -fx-background-size:90%95%; -fx-background-image: url(https://gameobjectstudio.com/images/exitBTN.png)" text="" alignment="TOP_RIGHT" onAction="#exitGame" />
+        <Label fx:id="countDownTimer" text="30" style="-fx-font-size: 50; -fx-padding: 25; -fx-text-fill: yellow; -fx-background-size:100%100%; -fx-background-image: url(https://gameobjectstudio.com/images/timerback.png)"/>
+        <Button maxWidth="1.7976931348623157E308" prefWidth="100" style="-fx-background-color:black; -fx-font-size: 25; -fx-background-size:100%100%; -fx-background-image: url(https://gameobjectstudio.com/images/stopBTN.png)" text="" alignment="TOP_RIGHT" onAction="#stopPlay" />
+        <Button maxWidth="1.7976931348623157E308" prefWidth="100" style="-fx-background-color:black; -fx-font-size: 25; -fx-background-size:100%100%; -fx-background-image: url(https://gameobjectstudio.com/images/goBTN.png)" text="" alignment="TOP_RIGHT" onAction="#nextPlay"/>
     </HBox>
 
 </VBox>
