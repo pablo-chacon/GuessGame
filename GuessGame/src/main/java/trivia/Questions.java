@@ -35,16 +35,17 @@ public class Questions {
         return trivia;
     }
 
-    public List<String> mocks() {
-        List<String> mock = new ArrayList<>(2);
-        Random r = new Random(mocks().size());
-        mock.add("mock1");
-        mock.add("mock2");
-        mock.add("mock3");
-        return mock;
+    public String mocks() {
+        List<String> theMocks = new ArrayList<>(2);
+        Random r = new Random(theMocks.size());
+        theMocks.add("mock1");
+        theMocks.add("mock2");
+        theMocks.add("mock3");
+        return theMocks.get(r.nextInt());
     }
 
     public String query() {
+        questions();
         return String.valueOf(trivia.keySet());
     }
 

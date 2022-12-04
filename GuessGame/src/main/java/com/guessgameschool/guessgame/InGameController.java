@@ -20,13 +20,14 @@ public class InGameController {
     private static Integer STARTTIME = 30;
     private Timeline timeline;
     private IntegerProperty timeSeconds = new SimpleIntegerProperty(STARTTIME);
-    public static Questions question = new Questions();
+    private static Questions questions = new Questions();
 
     public InGameController(){
         instance = this;
     }
     @FXML
     private Label questionBox;
+
     @FXML
     public Label countDownTimer;
     @FXML
@@ -73,26 +74,26 @@ public class InGameController {
 
     @FXML
     public void question() {
-        questionBox.setText(question.query());
+        questionBox.setText(questions.query());
     }
     @FXML
     protected void optionOne() {
-        questionBox.setText(question.answer());
+        questionBox.setText(questions.answer());
 
     }
     @FXML
     protected void optionTwo() {
-        questionBox.setText("You pressed button nr two");
+        questionBox.setText("Button 2");
 
     }
     @FXML
     protected void optionThree() {
-        questionBox.setText("You pressed button nr three");
+        questionBox.setText("Button 3");
 
     }
     @FXML
     protected void optionFour() {
-        questionBox.setText("You pressed button nr four");
+        questionBox.setText("Button 4");
 
     }
 
