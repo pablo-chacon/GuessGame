@@ -3,13 +3,12 @@ package trivia;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Random;
 
 public class Questions {
 
-    public HashMap<String, String> trivia = new HashMap<>();
-
     public HashMap<String, String> Questions() {
-
+        HashMap<String, String> trivia = new HashMap<>();
         trivia.put("Where in London is the American Embassy", "Grosvenor Square");
         trivia.put("Where in London were the Frost Fairs held until 1831", "on the thames");
         trivia.put("Where in Scotland is there a replica of the Colosseum of Rome known as McCaigs Tower", "oban");
@@ -37,9 +36,18 @@ public class Questions {
 
     public List<String> mocks() {
         List<String> mock = new ArrayList<>(2);
+        Random r = new Random(mocks().size());
         mock.add("mock1");
         mock.add("mock2");
         mock.add("mock3");
         return mock;
+    }
+
+    public String query() {
+        return String.valueOf(Questions().keySet());
+    }
+
+    public String answer() {
+        return String.valueOf(Questions().values());
     }
 }
