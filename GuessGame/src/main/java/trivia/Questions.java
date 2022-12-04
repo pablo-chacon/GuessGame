@@ -1,13 +1,15 @@
 package trivia;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class Questions {
-
 
     public HashMap<String, String> trivia = new HashMap<>();
 
     public HashMap<String, String> Questions() {
+
         trivia.put("Where in London is the American Embassy", "Grosvenor Square");
         trivia.put("Where in London were the Frost Fairs held until 1831", "on the thames");
         trivia.put("Where in Scotland is there a replica of the Colosseum of Rome known as McCaigs Tower", "oban");
@@ -31,5 +33,13 @@ public class Questions {
         trivia.put("In Chess, the obligation to move even when it must be disadvantageous", "zug zwang");
 
         return trivia;
+    }
+
+    public List<String> mocks() {
+        List<String> mock = new ArrayList<>(2);
+        mock.add("mock1");
+        mock.add("mock2");
+        mock.add("mock3");
+        return mock;
     }
 }

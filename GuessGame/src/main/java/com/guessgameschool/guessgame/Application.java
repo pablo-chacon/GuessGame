@@ -3,7 +3,7 @@ package com.guessgameschool.guessgame;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import javafx.scene.control.TextArea;
+
 import java.io.IOException;
 
 public class Application extends javafx.application.Application {
