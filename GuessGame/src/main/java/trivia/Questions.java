@@ -7,8 +7,9 @@ import java.util.Random;
 
 public class Questions {
 
-    public HashMap<String, String> Questions() {
-        HashMap<String, String> trivia = new HashMap<>();
+    HashMap<String, String> trivia = new HashMap<>();
+    public HashMap<String, String> questions() {
+
         trivia.put("Where in London is the American Embassy", "Grosvenor Square");
         trivia.put("Where in London were the Frost Fairs held until 1831", "on the thames");
         trivia.put("Where in Scotland is there a replica of the Colosseum of Rome known as McCaigs Tower", "oban");
@@ -44,10 +45,11 @@ public class Questions {
     }
 
     public String query() {
-        return String.valueOf(Questions().keySet());
+        return String.valueOf(trivia.keySet());
     }
 
     public String answer() {
-        return String.valueOf(Questions().values());
+        questions();
+        return String.valueOf(trivia.values());
     }
 }

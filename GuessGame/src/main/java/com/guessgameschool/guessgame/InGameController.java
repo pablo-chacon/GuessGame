@@ -1,6 +1,5 @@
 package com.guessgameschool.guessgame;
 
-import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
@@ -10,6 +9,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.util.Duration;
+import trivia.Questions;
+
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -19,7 +20,7 @@ public class InGameController {
     private static Integer STARTTIME = 30;
     private Timeline timeline;
     private IntegerProperty timeSeconds = new SimpleIntegerProperty(STARTTIME);
-
+    public static Questions question = new Questions();
 
     public InGameController(){
         instance = this;
@@ -71,8 +72,12 @@ public class InGameController {
 
 
     @FXML
+    public void question() {
+        questionBox.setText(question.query());
+    }
+    @FXML
     protected void optionOne() {
-        questionBox.setText("You pressed button nr one");
+        questionBox.setText(question.answer());
 
     }
     @FXML
