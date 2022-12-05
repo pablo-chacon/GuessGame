@@ -6,6 +6,7 @@ import javafx.animation.Timeline;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.util.Duration;
@@ -30,6 +31,9 @@ public class InGameController {
 
     @FXML
     public Label countDownTimer;
+
+    @FXML
+    private Button optionOne;
     @FXML
     private RadioButton lvl1;
     @FXML
@@ -78,7 +82,8 @@ public class InGameController {
     }
     @FXML
     protected void optionOne() {
-        questionBox.setText(questions.answer());
+
+
 
     }
     @FXML
@@ -99,19 +104,20 @@ public class InGameController {
 
     @FXML
     protected void stopPlay() {
-        questionBox.setText("Stop playing");
+        questionBox.setText("Congratulations, You desided to collect the money");
 
     }
 
     @FXML
     protected void exitGame() {
-        questionBox.setText("Exit game");
-        //System.exit(0);
+        System.exit(0);
 
 
     }
     @FXML
     public void nextPlay() {
+        questionBox.setText(questions.query());
+        optionOne.setText(questions.answer());
         Timer t = new Timer();
         t.schedule(new GameOver() {},  31000);
 
