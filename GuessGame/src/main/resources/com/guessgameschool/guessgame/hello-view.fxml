@@ -44,17 +44,17 @@
         </HBox>
     </HBox>
     <HBox id="TopButtons" alignment="TOP_CENTER" style=" -fx-padding: -300; -fx-border-insets: 10; -fx-background-insets: 10;">
-        <Button fx:id="optionOne" style="-fx-font-size: 15; -fx-text-fill: #ffffff; -fx-background-color:#12202d; -fx-background-size:100%100%; -fx-background-image: url(https://gameobjectstudio.com/images/buttons9.png)" text="Here is the answer box where you can put you text in, it supports 2 lines of text in it." alignment="TOP_LEFT" minWidth="380" maxWidth="380" maxHeight="55" minHeight="55" wrapText="true" onAction="#optionOne">
+        <Button fx:id="optionOne" style="-fx-font-size: 15; -fx-text-fill: #ffffff; -fx-background-color:#12202d; -fx-background-size:100%100%; -fx-background-image: url(https://gameobjectstudio.com/images/buttons9.png)" text="" alignment="TOP_LEFT" minWidth="380" maxWidth="380" maxHeight="55" minHeight="55" wrapText="true" onAction="#optionOne">
         </Button>
     </HBox>
     <HBox  id="TopButtons" alignment="TOP_CENTER" style="-fx-padding: -250; -fx-border-insets: 10; -fx-background-insets: 10;">
-        <Button fx:id="optionTwo" style="-fx-font-size: 15; -fx-text-fill: #ffffff; -fx-background-color:#12202d; -fx-background-size:100%100%; -fx-background-image: url(https://gameobjectstudio.com/images/buttons9.png)" text="Here is the answer box where you can put you text in, it supports 2 lines of text in it." alignment="TOP_LEFT" minWidth="380" maxWidth="380" maxHeight="55" minHeight="55" wrapText="true" onAction="#optionTwo" />
+        <Button fx:id="optionTwo" style="-fx-font-size: 15; -fx-text-fill: #ffffff; -fx-background-color:#12202d; -fx-background-size:100%100%; -fx-background-image: url(https://gameobjectstudio.com/images/buttons9.png)" text="" alignment="TOP_LEFT" minWidth="380" maxWidth="380" maxHeight="55" minHeight="55" wrapText="true" onAction="#optionTwo" />
     </HBox>
     <HBox  id="TopButtons" alignment="TOP_CENTER" style="-fx-padding: -200; -fx-border-insets: 10; -fx-background-insets: 10;">
-        <Button fx:id="optionThree" style="-fx-font-size: 15; -fx-text-fill: #ffffff; -fx-background-color:#12202d; -fx-background-size:100%100%; -fx-background-image: url(https://gameobjectstudio.com/images/buttons9.png)" text="Here is the answer box where you can put you text in, it supports 2 lines of text in it." alignment="TOP_LEFT" minWidth="380" maxWidth="380" maxHeight="55" minHeight="55" wrapText="true" onAction="#optionThree" />
+        <Button fx:id="optionThree" style="-fx-font-size: 15; -fx-text-fill: #ffffff; -fx-background-color:#12202d; -fx-background-size:100%100%; -fx-background-image: url(https://gameobjectstudio.com/images/buttons9.png)" text="" alignment="TOP_LEFT" minWidth="380" maxWidth="380" maxHeight="55" minHeight="55" wrapText="true" onAction="#optionThree" />
     </HBox>
     <HBox id="TopButtons" alignment="TOP_CENTER" style="-fx-padding: -150; -fx-border-insets: 10; -fx-background-insets: 10;">
-        <Button fx:id="optionFour" style="-fx-font-size: 15; -fx-text-fill: #ffffff; -fx-background-color:#12202d; -fx-background-size:100%100%; -fx-background-image: url(https://gameobjectstudio.com/images/buttons9.png)" text="Here is the answer box where you can put you text in, it supports 2 lines of text in it." alignment="TOP_LEFT" minWidth="380" maxWidth="380" maxHeight="55" minHeight="55" wrapText="true" onAction="#optionFour" />
+        <Button fx:id="optionFour" style="-fx-font-size: 15; -fx-text-fill: #ffffff; -fx-background-color:#12202d; -fx-background-size:100%100%; -fx-background-image: url(https://gameobjectstudio.com/images/buttons9.png)" text="" alignment="TOP_LEFT" minWidth="380" maxWidth="380" maxHeight="55" minHeight="55" wrapText="true" onAction="#optionFour" />
     </HBox>
     <HBox id="TopButtons" alignment="CENTER" style="-fx-padding: -120; -fx-border-insets: 1; -fx-background-insets: 1;">
         <Button maxWidth="1.7976931348623157E308" prefWidth="100" style="-fx-background-color:black; -fx-font-size: 25; -fx-background-size:90%95%; -fx-background-image: url(https://gameobjectstudio.com/images/exitBTN.png)" text="" alignment="TOP_RIGHT" onAction="#exitGame" />
