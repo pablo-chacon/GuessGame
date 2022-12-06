@@ -10,8 +10,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.util.Duration;
-import trivia.Questions;
+import trivia.Trivia;
 
+import java.io.IOException;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -21,7 +22,7 @@ public class InGameController {
     private static Integer STARTTIME = 30;
     private Timeline timeline;
     private IntegerProperty timeSeconds = new SimpleIntegerProperty(STARTTIME);
-    private static Questions questions = new Questions();
+
 
     public InGameController(){
         instance = this;
@@ -77,8 +78,8 @@ public class InGameController {
 
 
     @FXML
-    public void question() {
-        questionBox.setText(questions.query());
+    public void question() throws IOException {
+        questionBox.setText("");
     }
     @FXML
     protected void optionOne() {
@@ -115,9 +116,9 @@ public class InGameController {
 
     }
     @FXML
-    public void nextPlay() {
-        questionBox.setText(questions.query());
-        optionOne.setText(questions.answer());
+    public void nextPlay() throws IOException {
+        questionBox.setText(String.valueOf(new Trivia()));
+        optionOne.setText(String.valueOf(new Trivia()));
         Timer t = new Timer();
         t.schedule(new GameOver() {},  31000);
 
