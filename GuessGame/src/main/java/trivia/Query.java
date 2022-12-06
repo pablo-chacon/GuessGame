@@ -68,7 +68,8 @@ public class Query {
     }
 
     public String toString() {
-        return "Subject : " + getSubject() + " Query : " + getQuery() + " Answer : " + getCorrectAnswer() +
+        return "\nSubject : " + getSubject() + " Query : " + getQuery() + " Answer : " + getCorrectAnswer() +
                 "\nMock 1 : " + getMock1() + " Mock 2 : " + getMock2() + " Mock 3 : " + getMock3();
+
     }
 }
