@@ -15,7 +15,7 @@ public class Trivia  {
     public static void loadTrivia() throws IOException {
         String line;
         BufferedReader br = new BufferedReader(new FileReader(
-                "/home/paraply/IdeaProjects/GuessGame/GuessGame/src/main/resources/com/guessgameschool/guessgame/trivia.csv"));
+                "GuessGame/src/main/resources/com/guessgameschool/guessgame/trivia.csv"));
         while ((line = br.readLine()) != null) {
             // seprator ",".
             String[] cols = line.split(",");
